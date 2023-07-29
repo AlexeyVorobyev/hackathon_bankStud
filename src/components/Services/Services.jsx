@@ -13,6 +13,9 @@ const Services = () => {
         if (curPath === "/services/specialities") {
             setHeaderTitle("Выбор специальности")
         }
+        else if (curPath === "/services/universities") {
+            setHeaderTitle("Выбор ВУЗА")
+        }
         else if (curPath === "/services/my_loans_application") {
             setHeaderTitle("Мои Заявки на кредиты")
         }
@@ -43,11 +46,6 @@ const Services = () => {
                     <p className={styles.serviceTitle}>Сервисы</p>
                     <nav className={styles.serviceWrapper}>
                         <NavLink
-                            to={"/actual_programs"}
-                            className={({ isActive }) =>
-                                (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
-                        >Актуальные программы</NavLink>
-                        <NavLink
                             to={"/services/my_loans_application"}
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
@@ -57,6 +55,11 @@ const Services = () => {
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
                         >Выбор Специальности</NavLink>
+                        <NavLink
+                            to={"/services/universities"}
+                            className={({ isActive }) =>
+                                (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
+                        >Выбор ВУЗа</NavLink>
                         <NavLink
                             to={"/scholarship"}
                             className={({ isActive }) =>
@@ -75,7 +78,7 @@ const Services = () => {
                     </nav>
                 </div>
 
-                <div className={styles.servicesOutlet}>
+                <div className={styles.servicesOutlet} onClick={() => setCheck(!check)}>
                     <Outlet/>
                 </div>
 

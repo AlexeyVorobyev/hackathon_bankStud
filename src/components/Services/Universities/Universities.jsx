@@ -2,8 +2,9 @@ import React from "react";
 import styles from './styles.module.scss'
 import {data} from "./assets/data";
 import {NavLink} from "react-router-dom";
-const Specialities = () => {
-    const SpecTableRow = ({data}) => {
+const Universities = () => {
+
+    const UniversityTableRow = ({data}) => {
         return (
             <div className={styles.tableRow}>
                 <div className={styles.tableRowImageContainer}>
@@ -13,12 +14,9 @@ const Specialities = () => {
                     <div className={styles.wrapper1}>
                         <p className={styles.tableRowTitle}>{data.name}</p>
                         <p className={styles.tableRowParagraph}>{data.description}</p>
-                        <NavLink
-                            className={styles.tableRowButton}
-                            to={"../universities"}
-                        >
+                        <div className={styles.tableRowButton}>
                             <p className={styles.tableRowButtonText}>{data.amountProfiles} профилей обучения</p>
-                        </NavLink>
+                        </div>
                     </div>
                     <div >
                         <div className={styles.tableRowParametersWrapper}>
@@ -67,21 +65,11 @@ const Specialities = () => {
                 </div>
             </form>
 
-            <div className={styles.profContainer}>
-                <p className={styles.profContainerTitle}>Узнай какая профессия подходит именно тебе!</p>
-                <NavLink
-                    className={styles.profContainerButton}
-                    to={"/proforient/start"}
-                >
-                    <p className={styles.profContainerButtonText}>Пройти тест на профориентацию</p>
-                </NavLink>
-            </div>
-
             <div className={styles.specTable}>
-                {data.map((elem,index) => <SpecTableRow data={elem} key={index}/>)}
+                {/*{data.map((elem,index) => <UniversityTableRow data={elem} key={index}/>)}*/}
             </div>
         </div>
     )
 }
 
-export {Specialities}
+export {Universities}

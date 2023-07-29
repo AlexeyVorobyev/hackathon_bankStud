@@ -21,11 +21,6 @@ const Cabinet = () => {
                     <p className={styles.serviceTitle}>Сервисы</p>
                     <nav className={styles.serviceWrapper}>
                         <NavLink
-                            to={"/actual_programs"}
-                            className={({ isActive }) =>
-                                (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
-                        >Актуальные программы</NavLink>
-                        <NavLink
                             to={"/services/my_loans_application"}
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
@@ -35,6 +30,11 @@ const Cabinet = () => {
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
                         >Выбор Специальности</NavLink>
+                        <NavLink
+                            to={"/services/universities"}
+                            className={({ isActive }) =>
+                                (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
+                        >Выбор ВУЗа</NavLink>
                         <NavLink
                             to={"/scholarship"}
                             className={({ isActive }) =>
