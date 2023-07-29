@@ -11,11 +11,15 @@ const Services = () => {
     React.useEffect(() => {
         const curPath = window.location.pathname;
         if (curPath === "/services/specialities") {
-            console.log(curPath)
             setHeaderTitle("Выбор специальности")
         }
+        else if (curPath === "/services/my_loans_application") {
+            setHeaderTitle("Мои Заявки на кредиты")
+        }
+        else if (curPath === "/services/my_loan_application_info") {
+            setHeaderTitle("Информация по заявке")
+        }
         else {
-            console.log(curPath)
             setHeaderTitle("Выгодное кредитование")
         }
     },[check])
@@ -44,10 +48,10 @@ const Services = () => {
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
                         >Актуальные программы</NavLink>
                         <NavLink
-                            to={"/actual_events"}
+                            to={"/services/my_loans_application"}
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
-                        >Актуальные события</NavLink>
+                        >Мои заявки на кредиты</NavLink>
                         <NavLink
                             to={"/services/specialities"}
                             className={({ isActive }) =>

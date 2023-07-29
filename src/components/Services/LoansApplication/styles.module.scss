@@ -1,0 +1,195 @@
+.loanApplicationSection {
+}
+
+.bankCard {
+  display: flex;
+  align-content: center;
+  gap:50px;
+
+  .bankImg {
+    width: 172px;
+    height: 78px;
+  }
+
+  .bankTitle {
+    max-width: 360px;
+    color: #515151;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.stepsContainer {
+  display: flex;
+  gap:10px;
+  margin-top: 50px;
+  width:90%;
+
+  .step {
+    display: flex;
+    gap:10px;
+
+    .stepEllipse {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: #29A5EB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+
+      .stepNum {
+        color: #FFF;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .stepText {
+      color: #000;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.applicationContainer {
+  margin-top: 32px;
+  padding:25px 30px 20px 30px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.10);
+
+  .sliderContainer {
+    .sliderTitle {
+      color: #515151;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .sliderVal {
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .wrapperSlider {
+    display: flex;
+    gap:100px;
+    align-items: center;
+
+    .monthCaption {
+      color: #515151;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .monthPrice {
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .applicationForm {
+    margin-top: 25px;
+    width: 60%;
+    .formTitle {
+      color: #515151;
+      font-family: Jost;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .formGrid {
+      display: grid;
+      margin-top:10px;
+      gap:10px;
+
+      .formInput:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .formInput:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      .formInput:nth-child(3) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      .formInput {
+        padding: 15px 0 15px 20px;
+        border:none;
+        outline: none;
+        background: none;
+        border-radius: 10px;
+        background: #D9D9D9;
+        color: #515151;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &::placeholder {
+          color: #515151;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .formButton {
+      margin: auto;
+      margin-top:23px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background: #29A5EB;
+      width: 191px;
+      height: 35px;
+
+      .formButtonText {
+        color: #FFF;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,27 +1,49 @@
 import React from "react";
 import styles from './styles.module.scss'
 import {ReactComponent as Arrows} from "./assets/arrows.svg";
-import {data} from "./assets/data";
+import {NavLink} from "react-router-dom";
 
 const Loans = () => {
 
+    const [loansData,setLoansData] = React.useState([])
+    const getLoansDataBase = async () => {
+        try {
+            console.log(process.env.REACT_APP_API_HOST);
+            const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/bank`);
+            const json = await response.json();
+            setLoansData(json);
+        } catch (error) {
+            alert(error);
+        }
+    };
+
+    React.useEffect(() => {
+        getLoansDataBase();
+    },[])
+
     const LoansTableRow = ({data}) => {
         return (
-            <div className={styles.tableRow}>
+            <NavLink
+                className={styles.tableRow}
+                to={"../loans_application"}
+                state={{
+                    bankId:data.id
+                }}
+            >
                 <div className={styles.tableRowImgContainer}>
-                    <img className={styles.tableRowImg} src={data.img}/>
+                    <img className={styles.tableRowImg} src={data.image}/>
                 </div>
                 <div className={styles.tableRowDescriptContainer}>
                     <p className={styles.tableRowDescript}>{data.description}</p>
                     <p className={styles.tableRowPercent}>от {data.percent}%</p>
                 </div>
-                <p className={styles.tableRowPrice}>до {data.price} млн. рублей</p>
-            </div>
+                <p className={styles.tableRowPrice}>до {data.maxSum/1000000} млн. рублей</p>
+            </NavLink>
         )
     }
 
     return (
-        <div className={styles.loansFlexWrapper}>
+        <section className={styles.loansFlexWrapper}>
             <form className={styles.loansForm}>
                 <div className={styles.loansFormInputContainer}>
                     <input className={styles.loansFormInput} placeholder={"Сумма кредита от"}/>
@@ -56,10 +78,11 @@ const Loans = () => {
                     </div>
                 </div>
                 <div className={styles.loansTableInner}>
-                    {data.map((elem,index) => <LoansTableRow data={elem} key={index}/>)}
+                    {/*{data.map((elem,index) => <LoansTableRow data={elem} key={index}/>)}*/}
+                    {loansData.map((elem,index) => <LoansTableRow data={elem} key={elem.id}/>)}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

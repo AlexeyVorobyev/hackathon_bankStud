@@ -26,10 +26,10 @@ const Cabinet = () => {
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
                         >Актуальные программы</NavLink>
                         <NavLink
-                            to={"/actual_events"}
+                            to={"/services/my_loans_application"}
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
-                        >Актуальные события</NavLink>
+                        >Мои заявки на кредиты</NavLink>
                         <NavLink
                             to={"/services/specialities"}
                             className={({ isActive }) =>

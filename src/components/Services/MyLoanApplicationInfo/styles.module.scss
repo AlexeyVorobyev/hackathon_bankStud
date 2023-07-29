@@ -1,0 +1,99 @@
+.card {
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.10);
+  padding:30px 0 30px 0;
+
+  .cardTitle {
+    margin-left: 30px;
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .cardPercent {
+    margin-top: 15px;
+    margin-left: 30px;
+    color: #000;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .cardGrid {
+    margin-top: 30px;
+    display: grid;
+    padding:30px;
+    background: rgba(114, 219, 11, 0.50);
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 80px;
+
+    .cardGridText {
+      color: #000;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .cardButtonsWrapper {
+    padding: 0 30px 0 30px;
+    margin-top: 40px;
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+
+    .applicationButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .applicationButtonText {
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .applicationButton:nth-child(1) {
+      border-radius: 10px;
+      border: 1px solid #29A5EB;
+      width: 332px;
+      height: 59px;
+
+      .buttonArrow {
+        width: 18px;
+        height: 23px;
+        margin-left: 10px;
+      }
+
+      .applicationButtonText {
+        color: #29A5EB;
+      }
+    }
+
+    .applicationButton:nth-child(2) {
+      width: 444px;
+      height: 59px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #29A5EB;
+
+      .applicationButtonText {
+        color: #FFF;
+      }
+    }
+  }
+}

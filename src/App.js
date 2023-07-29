@@ -13,6 +13,9 @@ import {Proforient} from "./components/Proforient/Proforient";
 import {Start} from "./components/Proforient/Start/Start";
 import {Question} from "./components/Proforient/Question/Question";
 import {Finish} from "./components/Proforient/Finish/Finish";
+import {LoansApplication} from "./components/Services/LoansApplication/LoansApplication";
+import {MyLoansApplication} from "./components/Services/MyLoansApplication/MyLoansApplication";
+import {MyLoanApplicationInfo} from "./components/Services/MyLoanApplicationInfo/MyLoanApplicationInfo";
 
 
 function App() {
@@ -29,6 +32,9 @@ function App() {
               <Route path="services" element={<Services/>}>
                   <Route path="specialities" element={<Specialities/>}/>
                   <Route path="loans" element={<Loans/>}/>
+                  <Route path="loans_application" element={<LoansApplication/>}/>
+                  <Route path="my_loans_application" element={<MyLoansApplication/>}/>
+                  <Route path="my_loan_application_info" element={<MyLoanApplicationInfo/>}/>
               </Route>
               <Route path="applications" element={<Applications/>}/>
               <Route path="tree" element={<Tree/>}>

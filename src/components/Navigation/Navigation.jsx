@@ -15,11 +15,11 @@ const Navigation = () => {
                         to={"/"}
                         className={styles.headerLogo}
                     >
-                        <p className={styles.headerLogoText}>СБ</p>
+                        <p className={styles.headerLogoText}>АБУ</p>
                     </NavLink>
-                    <div className={styles.headerButton}>
-                        <p className={styles.headerButtonText}>Выбрать ВУЗ</p>
-                    </div>
+                    {/*<div className={styles.headerButton}>*/}
+                    {/*    <p className={styles.headerButtonText}>Выбрать ВУЗ</p>*/}
+                    {/*</div>*/}
                 </div>
                 <div className={styles.headerWrapper2}>
                     <div className={styles.headerLinks}>

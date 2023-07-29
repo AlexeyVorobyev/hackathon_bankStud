@@ -15,7 +15,7 @@ const Finish = () => {
             </p>
             <NavLink
                 className={styles.profContainerButton}
-                to={"/"}
+                to={"/tree/tree_specialities"}
             >
                 <p className={styles.profContainerButtonText}>Посмотреть дерево развития</p>
             </NavLink>
