@@ -1,0 +1,78 @@
+.treeDescriptFlex {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  gap: 20px;
+
+  .treeDescriptComp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .treeDescriptTitle {
+      color: #000;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .treeDescriptParWrap {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .treeDescriptPar {
+        width: 95%;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .treeListWrap {
+      padding-left: 35px;
+      width: 95%;
+      color: #000;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      .treeListTitle {
+
+      }
+
+      .treeList {
+        margin-top: 0px;
+        list-style:none;
+        padding: 0;
+
+        .treeListElem {
+          padding-left:12px;
+        }
+
+        .treeListElem:before{
+          content: '';
+          display: inline-block;
+          height:3px;
+          width: 3px;
+          vertical-align: middle;
+          border-radius:100%;
+          background-color:#000;
+          margin-right:12px;
+        }
+      }
+    }
+
+    .treeDescriptDot {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background-color: #28BF20;
+    }
+  }
+}

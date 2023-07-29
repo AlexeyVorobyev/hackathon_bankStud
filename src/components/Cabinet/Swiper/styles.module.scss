@@ -1,0 +1,108 @@
+.swiperContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 6;
+
+  .swiperButton {
+    position: absolute;
+    right:-35px;
+    top:calc(50% - 15px - 15px);
+    width: 30px;
+    height: 30px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .swiper {
+    position: relative;
+    height: 100%;
+    padding: 30px 30px 50px 40px;
+    border-radius: 10px;
+    background: #29A5EB;
+
+    .slideTitle {
+      color: #FFF;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .slideParagraph {
+      color: #FFF;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .slideCloudBig {
+      position: absolute;
+      bottom: 112px;
+      left:40px;
+    }
+
+    .slideCloudSmall {
+      position: absolute;
+      bottom: 250px;
+      left:175px;
+    }
+
+    .slideButton {
+      display: flex;
+      border-radius: 10px;
+      border: 2px solid #FFF;
+      width: 200px;
+      height: 50px;
+      position: absolute;
+      bottom: 43px;
+      left: calc(50% - 100px);
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .slideButtonText {
+        color: #FFF;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .swiperPagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .swiperPaginationDotActive {
+      background-color: #29A5EB;
+    }
+
+    .swiperPaginationDotDisActive {
+      background-color: #F0F0F0;
+    }
+
+    .swiperPaginationDot {
+      border-radius: 20px;
+      margin-top: 12px;
+      width: 20px;
+      height: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

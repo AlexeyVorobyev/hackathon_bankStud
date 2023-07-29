@@ -26,7 +26,7 @@
     width: 552.847px;
     height: 524.117px;
     border-radius: 552.847px;
-    background: rgba(40, 191, 32, 0.50);
+    background: #29A5EB;
     filter: blur(50px);
     z-index: 0;
   }
@@ -75,7 +75,7 @@
     .orderButton {
       margin-top:45px;
       border-radius: 10px;
-      background: #28BF20;
+      background: #29A5EB;
       width: 303px;
       height: 70px;
       display: flex;
@@ -179,6 +179,7 @@
         flex-shrink: 0;
         bottom: 40px;
         left: calc(50% - 40px);
+        fill: #29A5EB;
       }
     }
   }

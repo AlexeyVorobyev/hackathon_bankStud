@@ -1,0 +1,176 @@
+.applicationsSection {
+  padding: 25px 70px 70px 70px;
+
+  .applicationsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .applicationsTitle {
+      color: #000;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .applicationsHeaderLink {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #1F1F1F;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .applicationsTable {
+    padding-right: 110px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .applicationsTableDescriptRow {
+      padding:0 200px 0 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .applicationsTableDescriptField {
+        color: #A3A3A3;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .tableRowWrapper {
+      .tableRowHeader {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        background: #FFF;
+        box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.10);
+        padding: 30px 50px 30px 65px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .universityName {
+          color: #000;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .universityPlace {
+          color: #000;
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .universityLink {
+          display: flex;
+          gap:13px;
+          justify-content: space-between;
+          align-items: center;
+          text-decoration: none;
+
+          .universityLinkText {
+            text-decoration: none;
+            color: #878787;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+
+      .tableRowStats {
+        padding: 30px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+
+        .userRow {
+          position: relative;
+          display: flex;
+          padding:6px 110px 6px 30px;
+          align-items: center;
+          justify-content: space-between;
+
+          .userRowWrapper {
+            display: flex;
+            gap:35px;
+            align-items: center;
+            justify-content: space-between;
+            width: fit-content;
+
+            .userPlaceYou {
+              color: #28BF20;
+            }
+
+            .userPlaceNotYou {
+              color: #878787;
+            }
+
+            .userPlace {
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+
+            .userName {
+              color: #000;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+
+          .userSumYou {
+            color: #28BF20;
+          }
+
+          .userSumNotYou {
+            color: #000;
+          }
+
+          .userSum {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .userStrokeYou {
+            background-color: #28BF20;
+          }
+
+          .userStrokeNotYou {
+            background-color: #A3A3A3;
+          }
+
+          .userStroke {
+            width: 100%;
+            position: absolute;
+            bottom:0;
+            left:0;
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+}

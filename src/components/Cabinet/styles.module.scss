@@ -1,0 +1,234 @@
+.cabinetBackground {
+  width: 100%;
+  max-width: 1440px;
+  height: 360px;
+  background: #F9F9F9;
+  position: absolute;
+  z-index: -5;
+}
+
+.cabinetGrid {
+  display: grid;
+  grid-template-columns: 0.72fr 0.28fr;
+  grid-template-rows: 1fr 0.001fr 0.1fr 0.8fr 1.3fr;
+  grid-column-gap:60px;
+  grid-row-gap: 35px;
+  padding:53px 70px 84px 71px;
+
+  .cabinetUserContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    gap: 56px;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    .cabinetUserPhoto {
+      width: 250px;
+      height: 250px;
+    }
+
+    .cabinetUserName {
+      width: 445px;
+      color: #000;
+      font-size: 55px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .cabinetUserSettings {
+
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top:0;
+      right:0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .serviceContainer {
+    padding: 30px 40px 40px 40px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.04);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    .serviceTitle {
+      color: #000;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .serviceWrapper {
+      display: flex;
+      flex-direction: column;
+      gap:10px;
+      margin-top: 15px;
+
+      .disActive {
+        text-decoration: none;
+      }
+
+      .active {
+        text-decoration: underline #AFF26D 2px;
+        text-underline-offset: 6px;
+      }
+
+      .serviceLink {
+        color: black;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .examResultsContainer {
+    background: #FFF;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.04);
+    padding:21px 106px 31px 40px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+
+    .examResultsTitle {
+      color: #000;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .examResultsStroke {
+      height: 2px;
+      background-color: #515151;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .examResultsTable {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 13px;
+
+      .examResultsTableRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .examResultsTableField {
+          color: #000;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+
+        .examResultsTableField:nth-child(2) {
+          display: inline-block;
+          width: 35px;
+        }
+      }
+    }
+  }
+
+  .applicationsContainer {
+    background: #FFF;
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.04);
+    padding:21px 106px 31px 40px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    .applicationsTitle {
+      color: #000;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .applicationsStroke {
+      height: 2px;
+      background-color: #515151;
+      margin-top: 8px;
+      width: 100%;
+    }
+
+    .applicationsTable {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 13px;
+
+      .applicationsTableRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .applicationsTableField {
+          color: #000;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .applicationsTableRow:nth-child(1) {
+        .applicationsTableField {
+          color: #878787;
+        }
+      }
+
+      .applicationsTableRow:nth-child(n + 2) {
+        .applicationsTableField:nth-child(2) {
+          display: inline-block;
+          width: 80px;
+        }
+      }
+    }
+
+    .applicationsLink {
+      padding-top: 10px;
+      display: flex;
+      width: fit-content;
+      gap:10px;
+      color: #29A5EB;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+      align-items: center;
+
+      .applicationsLinkArrow {
+        margin-top: 5px;
+      }
+
+      .applicationsLinkText {
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
