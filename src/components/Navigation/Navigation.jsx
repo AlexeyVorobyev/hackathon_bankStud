@@ -32,7 +32,7 @@ const Navigation = () => {
                             to={""}
                             className={({ isActive }) =>
                                 (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
-                        >Услуги</NavLink>
+                        >Гайд о поступлении</NavLink>
                         <NavLink
                             to={""}
                             className={({ isActive }) =>

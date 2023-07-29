@@ -1,0 +1,124 @@
+.specFlexWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:22px;
+
+  .specForm {
+    position: relative;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    padding: 50px 140px 85px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+
+    .specFormButton {
+      width: 200px;
+      height: 30px;
+      position: absolute;
+      bottom:25px;
+      left:calc(50% - 100px);
+      border-radius: 10px;
+      border: 1px solid #29A5EB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .specFormButtonText {
+        color: #29A5EB;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+
+    .specFormInputContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .specFormInput {
+        background: none;
+        outline: none;
+        border: none;
+        width: 100%;
+        height: 35px;
+        color: #878787;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &::placeholder {
+          color: #878787;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+
+      .specFormInputStroke {
+        width: 100%;
+        height: 2px;
+        background-color: #29A5EB;
+      }
+    }
+  }
+
+  .profContainer {
+    padding:10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    border-radius: 10px;
+    background: #29A5EB;
+
+    .profContainerTitle {
+      color: #FFF;
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .profContainerButton {
+      width: 350px;
+      height: 40px;
+      border-radius: 10px;
+      background: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      .profContainerButtonText {
+        color: #29A5EB;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .specTable {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
+}

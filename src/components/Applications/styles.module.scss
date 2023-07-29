@@ -49,6 +49,30 @@
       }
     }
 
+    .tableRowHeaderUniversity {
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.10);
+      padding: 30px 50px 30px 65px;
+
+
+      .tableRowTitle {
+        color: #000;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .tableRowPlusSvg {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
     .tableRowWrapper {
       .tableRowHeader {
         display: flex;
@@ -152,6 +176,8 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            display: inline-block;
+            width: 35px;
           }
 
           .userStrokeYou {

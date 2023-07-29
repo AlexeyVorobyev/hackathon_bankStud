@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import {NavLink} from "react-router-dom";
 import {ReactComponent as Arrow} from './assets/arrow.svg';
 import {ReactComponent as ArrowSmall} from './assets/ArrowSmall.svg';
+import {ReactComponent as Plus} from './assets/plus.svg';
 import {data} from "./assets/data";
 import classNames from "classnames";
 const ApplicationsTableRow = ({data,pos}) => {
@@ -43,7 +44,7 @@ const Applications = () => {
     return (
         <section className={styles.applicationsSection}>
             <div className={styles.applicationsHeader}>
-                <p className={styles.applicationsTitle}>Дерево возможностей</p>
+                <p className={styles.applicationsTitle}>Поданные заявления</p>
                 <NavLink
                     to={"/cabinet"}
                     className={styles.applicationsHeaderLink}
@@ -58,6 +59,10 @@ const Applications = () => {
                     <p className={styles.applicationsTableDescriptField}>Место в списке на поступление</p>
                 </div>
                 {data.map((elem,index) => <ApplicationsTableRow data={elem} key={index} pos={index + 1}/>)}
+                <div className={styles.tableRowHeaderUniversity} >
+                    <p className={styles.tableRowTitle}>Подать документы в ВУЗ</p>
+                    <Plus className={styles.tableRowPlusSvg}/>
+                </div>
             </div>
         </section>
     )
