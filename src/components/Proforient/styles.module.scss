@@ -1,0 +1,30 @@
+.proforientSection {
+  padding: 0 70px 110px 70px;
+
+  .applicationsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 60px;
+
+    .applicationsTitle {
+      color: #000;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .applicationsHeaderLink {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #1F1F1F;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

@@ -8,6 +8,11 @@ import {TreeSpecialities} from "./components/Tree/TreeSpecialities/TreeSpecialit
 import {TreeSpecialitiesDescript} from "./components/Tree/TreeSpecialitiesDescript/TreeSpecialitiesDescript";
 import {Services} from "./components/Services/Services";
 import {Specialities} from "./components/Services/Specialities/Specialities";
+import {Loans} from "./components/Services/Loans/Loans";
+import {Proforient} from "./components/Proforient/Proforient";
+import {Start} from "./components/Proforient/Start/Start";
+import {Question} from "./components/Proforient/Question/Question";
+import {Finish} from "./components/Proforient/Finish/Finish";
 
 
 function App() {
@@ -16,9 +21,14 @@ function App() {
           <Route path="/" element={<Navigation/>}>
               <Route index element={<Landing/>}/>
               <Route path="cabinet" element={<Cabinet/>}/>
+              <Route path="proforient" element={<Proforient/>}>
+                  <Route path="start" element={<Start/>}/>
+                  <Route path="question" element={<Question/>}/>
+                  <Route path="finish" element={<Finish/>}/>
+              </Route>
               <Route path="services" element={<Services/>}>
                   <Route path="specialities" element={<Specialities/>}/>
-                  <Route path="loans" />
+                  <Route path="loans" element={<Loans/>}/>
               </Route>
               <Route path="applications" element={<Applications/>}/>
               <Route path="tree" element={<Tree/>}>
