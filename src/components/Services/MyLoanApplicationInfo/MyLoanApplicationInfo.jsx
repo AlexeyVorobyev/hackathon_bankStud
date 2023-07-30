@@ -22,7 +22,7 @@ const MyLoanApplicationInfo = () => {
         }
     };
 
-    React.useState(() => {
+    React.useEffect(() => {
         const {applicationId} = location.state
         setApplicationId(applicationId);
         console.log(applicationId);

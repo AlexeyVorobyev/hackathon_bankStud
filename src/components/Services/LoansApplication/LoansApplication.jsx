@@ -94,7 +94,7 @@ const LoansApplication = () => {
 
     const [bankId,setBankId] = React.useState(null);
 
-    React.useState(() => {
+    React.useEffect(() => {
         const {bankId} = location.state
         setBankId(bankId);
         console.log(bankId);
