@@ -33,11 +33,11 @@ const Navigation = () => {
                             className={({ isActive }) =>
                                 (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
                         >Гайд о поступлении</NavLink>
-                        {/*<NavLink*/}
-                        {/*    to={""}*/}
-                        {/*    className={({ isActive }) =>*/}
-                        {/*        (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}*/}
-                        {/*>Преймущества</NavLink>*/}
+                        <NavLink
+                            to={"/services/loans"}
+                            className={({ isActive }) =>
+                                (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
+                        >Сервисы</NavLink>
                         {/*<NavLink*/}
                         {/*    to={""}*/}
                         {/*    className={({ isActive }) =>*/}

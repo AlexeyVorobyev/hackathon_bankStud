@@ -17,7 +17,7 @@ const Contacts = () => {
                     </div>
                     <p className={styles.cardName}>Алексей Воробьев</p>
                     <p className={styles.cardProfession}>Frontend/Mobile разработчик</p>
-                    <p className={styles.cardLink}>@Kurt_Alexis_23</p>
+                    <a href={"https://t.me/Kurt_Alexis_23"} className={styles.cardLink}>@Kurt_Alexis_23</a>
                     <p className={styles.cardStack}>Технологический стек: React, SASS/SCSS</p>
                 </div>
                 <div className={styles.contactsCard}>
@@ -26,7 +26,7 @@ const Contacts = () => {
                     </div>
                     <p className={styles.cardName}>Никита Волошин</p>
                     <p className={styles.cardProfession}>Backend разработчик</p>
-                    <p className={styles.cardLink}>@nikitaVoV</p>
+                    <a href={"https://t.me/nikitaVoV"} className={styles.cardLink}>@nikitaVoV</a>
                     <p style={{marginTop:"50px"}} className={styles.cardStack}>Технологический стек: Java Spring, Postgres</p>
                 </div>
                 <div className={styles.contactsCard}>
@@ -35,7 +35,7 @@ const Contacts = () => {
                     </div>
                     <p className={styles.cardName}>Иван Головачев</p>
                     <p className={styles.cardProfession}>Проджект менеджер</p>
-                    <p className={styles.cardLink}>@skoro0977</p>
+                    <a href={"https://t.me/skoro0977"} className={styles.cardLink}>@skoro0977</a>
                 </div>
                 <div className={styles.contactsCard}>
                     <div className={styles.cardImgContainer}>
@@ -43,7 +43,7 @@ const Contacts = () => {
                     </div>
                     <p className={styles.cardName}>Софья Коновалова</p>
                     <p className={styles.cardProfession}>UI/UX designer</p>
-                    <p className={styles.cardLink}>@art3midas</p>
+                    <a href={"https://t.me/art3midas"} className={styles.cardLink}>@art3midas</a>
                 </div>
                 <div className={styles.contactsCard}>
                     <div className={styles.cardImgContainer}>
@@ -51,7 +51,7 @@ const Contacts = () => {
                     </div>
                     <p className={styles.cardName}>Екатерина Мочалова</p>
                     <p className={styles.cardProfession}>Аналитик</p>
-                    <p className={styles.cardLink}>@katerina_makone</p>
+                    <a href={"https://t.me/katerina_makone"} className={styles.cardLink}>@katerina_makone</a>
                 </div>
             </div>
         </section>
