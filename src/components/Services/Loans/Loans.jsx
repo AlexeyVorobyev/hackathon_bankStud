@@ -11,8 +11,12 @@ const Loans = () => {
             console.log(process.env.REACT_APP_API_HOST);
             const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/bank`);
             const json = await response.json();
-            console.log(json);
-            setLoansData(json);
+            console.log(json)
+            const sortedjson1 = json.filter((elem) => elem.id === 1)
+            const sortedjson2 = json.filter((elem) => elem.id !== 1)
+            const res = [...sortedjson1,...sortedjson2]
+            console.log(sortedjson1,sortedjson2);
+            setLoansData(res);
         } catch (error) {
             alert(error);
         }
