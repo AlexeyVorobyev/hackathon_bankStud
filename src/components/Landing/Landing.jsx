@@ -58,7 +58,7 @@ const Landing = () => {
                         <div className={styles.cardEllipse}>
                             <p className={styles.cardEllipseText}>3</p>
                         </div>
-                        <p className={styles.cardTitle}>Полуйчайте бонусы от партнеров</p>
+                        <p className={styles.cardTitle}>Получайте бонусы от партнеров</p>
                         <p className={styles.cardParagraph}>Бонусы от партнеров представляются всем нашим клиентам</p>
                         <PresentSvg className={styles.cardSvg}/>
                     </div>
