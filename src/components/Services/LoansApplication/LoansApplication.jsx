@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import {MySlider} from "./MySlider/MySlider";
 import Bank from "./assets/bank.png"
 import {useLocation} from "react-router";
+import {NavLink} from "react-router-dom";
 
 const sliderSettings1 = {
     width:"70%",
@@ -62,15 +63,48 @@ const LoansApplication = () => {
 
     const location = useLocation()
 
+    const [loanDataBase,setLoanDataBase] = React.useState({});
+
+    const getLoanDataBase = async (id) => {
+        try {
+            console.log(process.env.REACT_APP_API_HOST);
+            const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/bank/${id}`);
+            const json = await response.json();
+            console.log(json);
+            setLoanDataBase(json)
+        } catch (error) {
+            alert(error);
+        }
+    };
+
+    const postLoanDataBase = async (id,year,amount) => {
+        try {
+            console.log(process.env.REACT_APP_API_HOST);
+            const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/bank/create`,{
+                method:'post',
+                body: JSON.stringify({amount:amount,year:year,bankId:id}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+        } catch (error) {
+            alert(error);
+        }
+    };
+
+    const [bankId,setBankId] = React.useState(null);
+
     React.useState(() => {
         const {bankId} = location.state
+        setBankId(bankId);
         console.log(bankId);
+        getLoanDataBase(bankId);
     },[])
 
     return (
         <section className={styles.loanApplicationSection}>
             <div className={styles.bankCard}>
-                <img className={styles.bankImg} src={Bank}/>
+                <img className={styles.bankImg} src={loanDataBase.image}/>
                 <p className={styles.bankTitle}>Выгодный кредит для студентов экономической кафедры</p>
             </div>
             <div className={styles.stepsContainer}>
@@ -135,9 +169,14 @@ const LoansApplication = () => {
                             onChange={(event) => setMail(event.target.value)}
                         />
                     </div>
-                    <div className={styles.formButton}>
+                    <NavLink
+                        style={{textDecoration:"none"}}
+                        onClick={() => postLoanDataBase(bankId,slider2,slider1)}
+                        className={styles.formButton}
+                        to={"/services/my_loans_application"}
+                    >
                         <p className={styles.formButtonText}>Подавть заявку</p>
-                    </div>
+                    </NavLink>
                 </form>
             </div>
         </section>

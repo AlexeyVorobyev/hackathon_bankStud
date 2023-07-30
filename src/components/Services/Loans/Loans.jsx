@@ -11,6 +11,7 @@ const Loans = () => {
             console.log(process.env.REACT_APP_API_HOST);
             const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/bank`);
             const json = await response.json();
+            console.log(json);
             setLoansData(json);
         } catch (error) {
             alert(error);
