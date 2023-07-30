@@ -7,27 +7,41 @@ const Universities = () => {
     const UniversityTableRow = ({data}) => {
         return (
             <div className={styles.tableRow}>
-                <div className={styles.tableRowImageContainer}>
-                    <img className={styles.tableRowImage} src={data.img}/>
-                </div>
-                <div className={styles.tableRowDescriptWrapper}>
-                    <div className={styles.wrapper1}>
-                        <p className={styles.tableRowTitle}>{data.name}</p>
-                        <p className={styles.tableRowParagraph}>{data.description}</p>
-                        <div className={styles.tableRowButton}>
-                            <p className={styles.tableRowButtonText}>{data.amountProfiles} профилей обучения</p>
+                <div className={styles.tableRowHeaderContainer}>
+                    <div className={styles.flexWrap}>
+                        <img className={styles.tableRowImage} src={data.img}/>
+                        <div className={styles.tableRowHeaderContainerText}>
+                            <p className={styles.tableRowHeaderText1}>{data.name}</p>
+                            <p className={styles.tableRowHeaderText2}>{data.descript}</p>
                         </div>
                     </div>
-                    <div >
-                        <div className={styles.tableRowParametersWrapper}>
-                            <p className={styles.tableRowParameter}>от {data.parameters.ballBudget} бал. бюджет</p>
-                            <p className={styles.tableRowParameter}>от {data.parameters.ballMoney} бал. платно</p>
-                            <p className={styles.tableRowParameter}>{data.parameters.amountBudget} мест бюджет</p>
-                            <p className={styles.tableRowParameter}>{data.parameters.amountMoney} мест платно</p>
-                        </div>
-                        <p className={styles.tableRowPrice}>от {data.parameters.price} тыс. рублей в год</p>
-                    </div>
+                    <NavLink
+                        className={styles.tableRowHeaderButton}
+                        to={"../university_info"}
+                    >
+                        <p className={styles.tableRowHeaderButtonText}>Информация о вузе</p>
+                    </NavLink>
                 </div>
+                <p className={styles.tableRowBodyInfo}>{data.info}</p>
+                <div className={styles.tableRowBodyWrapper}>
+                    <div className={styles.tableRowBodyWrapper2}>
+                        <div className={styles.tableRowBodyWrapper3}>
+                            <p className={styles.tableRowBodyInfoPlaces}>Количество платных мест в 2023 году</p>
+                            <p className={styles.tableRowBodyLink}>Посмотреть</p>
+                        </div>
+                        <div className={styles.tableRowBodyWrapper3}>
+                            <p className={styles.tableRowBodyInfoPlaces}>Стоимость обучения в год в 2023 году</p>
+                            <p className={styles.tableRowBodyLink}>Посмотреть</p>
+                        </div>
+                    </div>
+                    <p className={styles.tableRowBodyPrice}>Стоимость обучения от {data.price} тыс. рублей в год</p>
+                </div>
+                <NavLink
+                    className={styles.tableRowBodyButton}
+                    to={"/steps"}
+                >
+                    <p className={styles.tableRowBodyButtonText}>Пошаговое руководство поcтупления</p>
+                </NavLink>
             </div>
         )
     }
@@ -66,7 +80,7 @@ const Universities = () => {
             </form>
 
             <div className={styles.specTable}>
-                {/*{data.map((elem,index) => <UniversityTableRow data={elem} key={index}/>)}*/}
+                {data.map((elem,index) => <UniversityTableRow data={elem} key={index}/>)}
             </div>
         </div>
     )

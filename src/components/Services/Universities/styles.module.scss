@@ -80,7 +80,7 @@
     display: flex;
     flex-direction: column;
     gap:20px;
-    max-height: 700px;
+    max-height: 685px;
     overflow-y: scroll;
     margin-top: 10px;
 
@@ -102,74 +102,64 @@
 
 
     .tableRow {
-      display: grid;
-      gap:30px;
-      border-radius: 10px;
       background: #FFF;
-      padding-right: 10px;
       box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.10);
+      padding: 22px 30px 20px 30px;
 
-      .tableRowImageContainer {
-        position: relative;
-        display: flex;
-        align-items: center;
+      .tableRowBodyButton {
+        margin-top: 15px;
+        width: 275px;
+        height: 40px;
+        flex-shrink: 0;
         border-radius: 10px;
-        overflow: hidden;
-        width: 222px;
-        grid-column-start: 1;
-        grid-column-end: 2;
+        background: #28BF20;
         text-decoration: none;
-
-        .tableRowImage {
-          position: absolute;
-          top:0;
-          left:-10px;
-          height: 100%;
-        }
-      }
-
-      .tableRowDescriptWrapper {
-        position: relative;
-        padding:15px 0 15px 0;
         display: flex;
-        gap:30px;
-        grid-column-start: 2;
-        grid-column-end: 3;
+        justify-content: center;
+        align-items: center;
 
-        .tableRowTitle {
-          color: #171717;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
+        &:hover {
+          cursor: pointer;
         }
 
-        .tableRowParagraph {
-          color: #515151;
+        .tableRowBodyButtonText {
+          color: #FFF;
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
         }
+      }
 
-        .tableRowButton {
-          position: absolute;
-          border-radius: 10px;
-          background: #AFF26D;
+      .tableRowHeaderContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid rgba(40, 191, 32, 0.2);;
+
+        .tableRowImage {
+          width: 97px;
+          height: 63px;
+          flex-shrink: 0;
+        }
+
+        .flexWrap {
           display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 191px;
-          height: 35px;
-          bottom:12px;
-          left:0;
-          
-          &:hover {
-            cursor: pointer;
+          gap:20px;
+        }
+
+        .tableRowHeaderContainerText {
+
+          .tableRowHeaderText1 {
+            color: #000;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
           }
 
-          .tableRowButtonText {
-            color: #FFF;
+          .tableRowHeaderText2 {
+            color: #000;
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -177,34 +167,78 @@
           }
         }
 
-        .wrapper1 {
-          max-width: 300px;
+        .tableRowHeaderButton {
+          border-radius: 10px;
+          border: 1px solid #29A5EB;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          width: 150px;
+          height: 35px;
+          align-items: center;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          .tableRowHeaderButtonText {
+            color: #29A5EB;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+
+      .tableRowBodyInfo {
+        margin-top: 10px;
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .tableRowBodyWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        .tableRowBodyWrapper2 {
+          gap:140px;
+          margin-top: 10px;
         }
 
-        .tableRowParametersWrapper {
+        .tableRowBodyWrapper3 {
           display: flex;
-          justify-content: start;
-          align-items: start;
-          flex-direction: column;
-          padding:0 0 0 40px;
-          gap:5px;
+          gap:80px;
+          justify-content: space-between;
 
-          .tableRowParameter {
+          .tableRowBodyInfoPlaces {
             color: #000;
-            font-size: 17px;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .tableRowBodyLink {
+            color: #29A5EB;
+            font-size: 13px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
           }
         }
 
-        .tableRowPrice {
+        .tableRowBodyPrice {
+          max-width: 220px;
           color: #000;
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
-          margin-top: 10px;
+          text-align: center;
         }
       }
     }

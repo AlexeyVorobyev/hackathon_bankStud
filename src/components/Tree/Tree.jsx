@@ -7,7 +7,7 @@ import {ReactComponent as Lupa} from './assets/lupa.svg';
 import {ReactComponent as Cross} from './assets/cross.svg';
 const Tree = () => {
 
-    const [isNavBarOpen, setIsNavBarOpen] = React.useState(true);
+    // const [isNavBarOpen, setIsNavBarOpen] = React.useState(true);
 
     return (
         <section className={styles.treeSection}>
@@ -29,8 +29,8 @@ const Tree = () => {
                     </div>
                     <Outlet/>
                 </div>
-                {isNavBarOpen && (<div className={styles.treeSideBar}>
-                    <Cross className={styles.treeSideBarCloseButton} onClick={() => setIsNavBarOpen(false)}/>
+                <div className={styles.treeSideBar}>
+                    {/*<Cross className={styles.treeSideBarCloseButton} onClick={() => setIsNavBarOpen(false)}/>*/}
                     <nav className={styles.treeSideNav }>
                         <NavLink
                             to={"tree_specialities"}
@@ -48,7 +48,7 @@ const Tree = () => {
                                 (classNames(styles.treeSideNavOption, isActive ? styles.active : styles.disActive))}
                         >Оформление студенческого кредита</NavLink>
                     </nav>
-                </div>)}
+                </div>
             </div>
         </section>
     )

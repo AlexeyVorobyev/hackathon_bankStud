@@ -7,25 +7,25 @@ const data = [
             {
                 yourself:false,
                 userPlace:32,
-                name:"Петров Петр Петрович",
+                name:"166-003-082 28",
                 sum:"298"
             },
             {
                 yourself:false,
                 userPlace:33,
-                name:"Пушкин Николай Александрович",
+                name:"166-023-082 28",
                 sum:"297"
             },
             {
                 yourself:true,
                 userPlace:34,
-                name:"Васильцова Юлия Владимировна",
+                name:"166-257-082 35",
                 sum:"296"
             },
             {
                 yourself:false,
                 userPlace:35,
-                name:"Коваленко Петр Михайлович",
+                name:"145-252-092 25",
                 sum:"295"
             },
         ]
@@ -38,25 +38,25 @@ const data = [
             {
                 yourself:false,
                 userPlace:32,
-                name:"Петров Петр Петрович",
+                name:"166-003-082 28",
                 sum:"298"
             },
             {
                 yourself:false,
                 userPlace:33,
-                name:"Пушкин Николай Александрович",
+                name:"166-023-082 28",
                 sum:"297"
             },
             {
                 yourself:true,
                 userPlace:34,
-                name:"Васильцова Юлия Владимировна",
+                name:"166-257-082 35",
                 sum:"296"
             },
             {
                 yourself:false,
                 userPlace:35,
-                name:"Коваленко Петр Михайлович",
+                name:"145-252-092 25",
                 sum:"295"
             },
         ]
@@ -69,25 +69,25 @@ const data = [
             {
                 yourself:false,
                 userPlace:32,
-                name:"Петров Петр Петрович",
+                name:"166-003-082 28",
                 sum:"298"
             },
             {
                 yourself:false,
                 userPlace:33,
-                name:"Пушкин Николай Александрович",
+                name:"166-023-082 28",
                 sum:"297"
             },
             {
                 yourself:true,
                 userPlace:34,
-                name:"Васильцова Юлия Владимировна",
+                name:"166-257-082 35",
                 sum:"296"
             },
             {
                 yourself:false,
                 userPlace:35,
-                name:"Коваленко Петр Михайлович",
+                name:"145-252-092 25",
                 sum:"295"
             },
         ]
@@ -100,29 +100,29 @@ const data = [
             {
                 yourself:false,
                 userPlace:32,
-                name:"Петров Петр Петрович",
+                name:"166-003-082 28",
                 sum:"298"
             },
             {
                 yourself:false,
                 userPlace:33,
-                name:"Пушкин Николай Александрович",
+                name:"166-023-082 28",
                 sum:"297"
             },
             {
                 yourself:true,
                 userPlace:34,
-                name:"Васильцова Юлия Владимировна",
+                name:"166-257-082 35",
                 sum:"296"
             },
             {
                 yourself:false,
                 userPlace:35,
-                name:"Коваленко Петр Михайлович",
+                name:"145-252-092 25",
                 sum:"295"
             },
         ]
-    }
+    },
 ]
 
 export {data}
