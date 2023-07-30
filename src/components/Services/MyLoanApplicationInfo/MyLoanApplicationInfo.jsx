@@ -32,7 +32,7 @@ const MyLoanApplicationInfo = () => {
 
     return (
         <div className={styles.card}>
-            <p className={styles.cardTitle}>{applicationsDataBase.bank.description}</p>
+            <p className={styles.cardTitle}>{}</p>
             <p className={styles.cardPercent}>Процентная ставка по кредиту: {applicationsDataBase.percent} %</p>
             <div className={styles.cardGrid}>
                 <p className={styles.cardGridText}>Сумма кредита: {applicationsDataBase.amount} Р</p>
