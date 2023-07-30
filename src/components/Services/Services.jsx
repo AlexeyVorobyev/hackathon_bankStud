@@ -16,6 +16,9 @@ const Services = () => {
         else if (curPath === "/services/universities") {
             setHeaderTitle("Выбор ВУЗА")
         }
+        else if (curPath === "/services/university_info") {
+            setHeaderTitle("Информация о вузе")
+        }
         else if (curPath === "/services/my_loans_application") {
             setHeaderTitle("Мои Заявки на кредиты")
         }

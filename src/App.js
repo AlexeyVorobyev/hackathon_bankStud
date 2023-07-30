@@ -17,6 +17,8 @@ import {LoansApplication} from "./components/Services/LoansApplication/LoansAppl
 import {MyLoansApplication} from "./components/Services/MyLoansApplication/MyLoansApplication";
 import {MyLoanApplicationInfo} from "./components/Services/MyLoanApplicationInfo/MyLoanApplicationInfo";
 import {Universities} from "./components/Services/Universities/Universities";
+import {UniversityInfo} from "./components/Services/UniversityInfo/UniversityInfo";
+import {Steps} from "./components/Steps/Steps";
 
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
               <Route path="services" element={<Services/>}>
                   <Route path="specialities" element={<Specialities/>}/>
                   <Route path="universities" element={<Universities/>}/>
+                  <Route path="university_info" element={<UniversityInfo/>}/>
                   <Route path="loans" element={<Loans/>}/>
                   <Route path="loans_application" element={<LoansApplication/>}/>
                   <Route path="my_loans_application" element={<MyLoansApplication/>}/>
@@ -43,6 +46,7 @@ function App() {
                   <Route path="tree_specialities" element={<TreeSpecialities/>}/>
                   <Route path="tree_specialities_descript" element={<TreeSpecialitiesDescript/>}/>
               </Route>
+              <Route path="steps" element={<Steps/>}/>
           </Route>
       </Routes>
   );

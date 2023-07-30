@@ -6,6 +6,7 @@ import {ReactComponent as CreditCardSvg} from './assets/creditCard.svg';
 import {ReactComponent as PresentSvg} from './assets/present.svg';
 import {ReactComponent as MoneySvg} from './assets/money.svg';
 import {ReactComponent as VectorLine} from './assets/vectorLine.svg';
+import {NavLink} from "react-router-dom";
 
 const Landing = () => {
     return (
@@ -25,9 +26,12 @@ const Landing = () => {
                         Оформи уникальную студенческу карту и взаимодействуй
                         с банком напрямую через сайт и мобильное приложение
                     </p>
-                    <div className={styles.orderButton}>
+                    <NavLink
+                        className={styles.orderButton}
+                        to={"/cabinet"}
+                    >
                         <p className={styles.orderButtonText}>Заказать</p>
-                    </div>
+                    </NavLink>
                 </div>
             </section>
             <section className={styles.howWorksSection}>

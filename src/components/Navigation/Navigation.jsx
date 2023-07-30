@@ -29,20 +29,20 @@ const Navigation = () => {
                                 (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
                         >На главную</NavLink>
                         <NavLink
-                            to={""}
+                            to={"steps"}
                             className={({ isActive }) =>
                                 (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
                         >Гайд о поступлении</NavLink>
-                        <NavLink
-                            to={""}
-                            className={({ isActive }) =>
-                                (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
-                        >Преймущества</NavLink>
-                        <NavLink
-                            to={""}
-                            className={({ isActive }) =>
-                                (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
-                        >Помощь</NavLink>
+                        {/*<NavLink*/}
+                        {/*    to={""}*/}
+                        {/*    className={({ isActive }) =>*/}
+                        {/*        (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}*/}
+                        {/*>Преймущества</NavLink>*/}
+                        {/*<NavLink*/}
+                        {/*    to={""}*/}
+                        {/*    className={({ isActive }) =>*/}
+                        {/*        (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}*/}
+                        {/*>Помощь</NavLink>*/}
                         <NavLink
                             to={""}
                             className={({ isActive }) =>
