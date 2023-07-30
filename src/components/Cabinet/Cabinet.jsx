@@ -35,11 +35,7 @@ const Cabinet = () => {
                             className={({ isActive }) =>
                                 (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
                         >Выбор ВУЗа</NavLink>
-                        <NavLink
-                            to={"/scholarship"}
-                            className={({ isActive }) =>
-                                (classNames(styles.serviceLink, isActive ? styles.active : styles.disActive))}
-                        >Моя Стипендия</NavLink>
+                        <p style={{color:"grey"}} className={styles.serviceLink}>Моя Стипендия</p>
                         <NavLink
                             to={"/services/loans"}
                             className={({ isActive }) =>

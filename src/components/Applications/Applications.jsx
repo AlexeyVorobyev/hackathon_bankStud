@@ -28,11 +28,13 @@ const ApplicationsTableRow = ({data,pos}) => {
         <div className={styles.tableRowWrapper}>
             <div className={styles.tableRowHeader} onClick={() => setOpen(!open)}>
                 <p className={styles.universityName}>{`${pos}. ${data.name}`}</p>
-                <p className={styles.universityPlace}>{data.userPlace}</p>
-                <a className={styles.universityLink} href={data.link}>
-                    <p className={styles.universityLinkText}>Перейти на сайт университета</p>
-                    <ArrowSmall/>
-                </a>
+                <div className={styles.quickFix}>
+                    <p className={styles.universityPlace}>{data.userPlace}</p>
+                    <a className={styles.universityLink} href={data.link}>
+                        <p className={styles.universityLinkText}>Перейти на сайт университета</p>
+                        <ArrowSmall/>
+                    </a>
+                </div>
             </div>
             {open && (<div className={styles.tableRowStats}>
                 {data.users.map((elem,index) => <UserRow data={elem} key={index}/>)}

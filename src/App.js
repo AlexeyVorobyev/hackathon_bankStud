@@ -19,6 +19,7 @@ import {MyLoanApplicationInfo} from "./components/Services/MyLoanApplicationInfo
 import {Universities} from "./components/Services/Universities/Universities";
 import {UniversityInfo} from "./components/Services/UniversityInfo/UniversityInfo";
 import {Steps} from "./components/Steps/Steps";
+import {Contacts} from "./components/Contacts/Contacts";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Navigation/>}>
               <Route index element={<Landing/>}/>
+              <Route path="contacts" element={<Contacts/>}/>
               <Route path="cabinet" element={<Cabinet/>}/>
               <Route path="proforient" element={<Proforient/>}>
                   <Route path="start" element={<Start/>}/>

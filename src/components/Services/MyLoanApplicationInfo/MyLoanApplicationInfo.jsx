@@ -8,14 +8,31 @@ const MyLoanApplicationInfo = () => {
     const [applicationId,setApplicationId] = React.useState(null);
     const location = useLocation()
 
-    const [applicationsDataBase,setApplicationsDataBase] = React.useState({});
+    const [applicationsDataBase,setApplicationsDataBase] = React.useState(null);
+
+    const applicationDone = async (id) => {
+        try {
+            console.log(process.env.REACT_APP_API_HOST);
+            const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/application/${id}/completed`,{
+                method:'post',
+                body:null,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            const json = await response.json();
+            console.log(json)
+        } catch (error) {
+
+        }
+    };
 
     const getApplicationDataBase = async (id) => {
         try {
             console.log(process.env.REACT_APP_API_HOST);
             const response = await fetch(`${process.env.REACT_APP_API_HOST}/api/application/${id}`);
             const json = await response.json();
-            console.log(json)
+            console.log(json.bank.description)
             setApplicationsDataBase(json);
         } catch (error) {
             alert(error);
@@ -31,8 +48,9 @@ const MyLoanApplicationInfo = () => {
 
 
     return (
-        <div className={styles.card}>
-            <p className={styles.cardTitle}>{}</p>
+        <div>
+        { applicationsDataBase !== null && (<div className={styles.card}>
+            <p className={styles.cardTitle}>{applicationsDataBase.bank.description}</p>
             <p className={styles.cardPercent}>Процентная ставка по кредиту: {applicationsDataBase.percent} %</p>
             <div className={styles.cardGrid}>
                 <p className={styles.cardGridText}>Сумма кредита: {applicationsDataBase.amount} Р</p>
@@ -41,15 +59,20 @@ const MyLoanApplicationInfo = () => {
                 <p className={styles.cardGridText}>Следующая оплата: Август</p>
             </div>
             <div className={styles.cardButtonsWrapper}>
-                <div className={styles.applicationButton}>
+                <a className={styles.applicationButton} href='https://www.dropbox.com/s/283qbchl90vfrc2/KD-potreb-bez-zaloga.pdf?dl=0' download>
                     <p className={styles.applicationButtonText}>Скачать договор</p>
                     <ArrowDown className={styles.buttonArrow}/>
-                </div>
-                <div className={styles.applicationButton}>
+                </a>
+                {applicationsDataBase.status.id !== 2 && (<NavLink
+                    onClick={() =>applicationDone(applicationId)}
+                    className={styles.applicationButton}
+                    to={"../my_loans_application"}
+                >
                     <p className={styles.applicationButtonText}>Подписать договор через гос. услуги</p>
-                </div>
+                </NavLink>)}
             </div>
-        </div>
+        </div>)}
+    </div>
     )
 }
 

@@ -44,7 +44,7 @@ const Navigation = () => {
                         {/*        (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}*/}
                         {/*>Помощь</NavLink>*/}
                         <NavLink
-                            to={""}
+                            to={"contacts"}
                             className={({ isActive }) =>
                                 (classNames(styles.headerLink, isActive ? styles.active : styles.disActive))}
                         >Контакты</NavLink>

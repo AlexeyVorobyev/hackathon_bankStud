@@ -37,16 +37,16 @@ const Tree = () => {
                             className={({ isActive }) =>
                                 (classNames(styles.treeSideNavOption, isActive ? styles.active : styles.disActive))}
                         >Продвижение по специальности</NavLink>
-                        <NavLink
-                            to={"tree_student_card"}
-                            className={({ isActive }) =>
-                                (classNames(styles.treeSideNavOption, isActive ? styles.active : styles.disActive))}
-                        >Получение студенческой карты</NavLink>
-                        <NavLink
-                            to={"tree_student_credit"}
-                            className={({ isActive }) =>
-                                (classNames(styles.treeSideNavOption, isActive ? styles.active : styles.disActive))}
-                        >Оформление студенческого кредита</NavLink>
+                        <div
+                            className={styles.treeSideNavOption}
+                            // className={({ isActive }) =>
+                            //     (classNames(styles.treeSideNavOption, isActive ? styles.active : styles.disActive))}
+                        >Получение студенческой карты</div>
+                        <div
+                            className={styles.treeSideNavOption}
+                            // className={({ isActive }) =>
+                            //     (classNames(styles.treeSideNavOption, isActive ? styles.active : styles.disActive))}
+                        >Оформление студенческого кредита</div>
                     </nav>
                 </div>
             </div>
